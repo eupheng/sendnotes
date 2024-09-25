@@ -21,6 +21,9 @@ LOG_STDERR_FORMATTER = 'Monolog\Formatter\JsonFormatter'
 SESSION_DRIVER = 'cookie'
 SESSION_SECURE_COOKIE = 'true'
 
+[deploy]
+release_command = "php  /var/www/html/artisan migrate --force"
+
 [http_service]
 internal_port = 8080
 force_https = true
